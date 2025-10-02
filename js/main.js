@@ -851,7 +851,6 @@ function slider(){
         range: "min",
         //orientation: "vertical",
         
- 
         change: function (event, ui) { //スライダー変更
             already_slided = 1;
             draw();
@@ -887,6 +886,7 @@ function slider(){
             svo_faceDraw();
             
             draw();
+            drawEmotionChart();
         },
  
         slide: function (event, ui) {// 変更中
@@ -961,6 +961,7 @@ function slider(){
              svo_faceDraw();
              //console.log("VAL2: ",valence2);
              draw();
+             drawEmotionChart();
          },
  
         slide: function (event, ui) {// 変更中
@@ -1032,6 +1033,7 @@ function slider(){
              svo_faceDraw();
             //console.log("VAL3: ",valence3);
             draw();
+            drawEmotionChart();
          },
  
         slide: function (event, ui) {// 変更中
@@ -1102,6 +1104,7 @@ function slider(){
              //console.log("VAL4: ",valence4);
              svo_faceDraw();
              draw();
+             drawEmotionChart();
         },
  
         slide: function (event, ui) {// 変更中
@@ -1149,6 +1152,7 @@ function slider(){
              pre_scaling_val = ui.value;
              svo_faceDraw();
              draw();
+             drawEmotionChart();
         },
  
         slide: function (event, ui) {// 変更中
@@ -1201,6 +1205,8 @@ $(document).ready(function () {
     // slider_limit();
     slider_my_point();
     slider_op_point();
+    drawEmotionChart();
+
 });
 
 
@@ -1221,6 +1227,7 @@ function slider_my_point(){
             my_item1_point_table.innerHTML = my_item1_point_slider+"point";
             // my_item1_point = my_item1_point_slider;
             my_item1_value.innerHTML = item1_number-pre_1value+"×"+my_item1_point_slider+"point";
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1249,6 +1256,7 @@ function slider_my_point(){
             my_item2_point_table.innerHTML = my_item2_point_slider+"point";
             // my_item2_point = my_item2_point_slider;
             my_item2_value.innerHTML = item2_number-pre_2value+"×"+my_item2_point_slider+"point";
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1277,6 +1285,7 @@ function slider_my_point(){
             my_item3_point_table.innerHTML = my_item3_point_slider+"point";
             // my_item3_point = my_item3_point_slider;
             my_item3_value.innerHTML = item3_number-pre_3value+"×"+my_item3_point_slider+"point";
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1305,6 +1314,7 @@ function slider_my_point(){
             my_item4_point_table.innerHTML = my_item4_point_slider+"point";
             // my_item4_point = my_item4_point_slider;
             my_item4_value.innerHTML = item4_number-pre_4value+"×"+my_item4_point_slider+"point";
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1343,6 +1353,7 @@ function slider_op_point(){
             // op_item1_point = op_item1_point_slider;
             // draw();
             // slider(); 
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1381,6 +1392,7 @@ function slider_op_point(){
             // op_item2_point = op_item2_point_slider;
             // draw();
             // slider(); 
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1419,6 +1431,7 @@ function slider_op_point(){
             // op_item3_point = op_item3_point_slider;
             // draw();
             // slider(); 
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1457,6 +1470,7 @@ function slider_op_point(){
             // op_item4_point = op_item4_point_slider;
             // draw();
             // slider(); 
+            drawEmotionChart();
         },
 
         slide: function (event, ui) {// 変更中
@@ -1491,6 +1505,7 @@ $("#slider_item1_number").slider({
         console.log("slider_item1_pre",slider_item1_pre);
         item1_image_table.innerHTML = slider_item1_pre+"";
         $('#item1_image_table').prepend('<img src="'+item1_image+'" width="20" height="20" ">');
+        drawEmotionChart();
     },
 
     slide: function (event, ui) {// 変更中
@@ -1515,6 +1530,7 @@ $("#slider_item2_number").slider({
         console.log("slider_item2_pre",slider_item2_pre);
         item2_image_table.innerHTML = slider_item2_pre+"";
         $('#item2_image_table').prepend('<img src="'+item2_image+'" width="20" height="20" ">');
+        drawEmotionChart();
     },
 
     slide: function (event, ui) {// 変更中
@@ -1539,6 +1555,7 @@ $("#slider_item3_number").slider({
         console.log("slider_item3_pre",slider_item3_pre);
         item3_image_table.innerHTML = slider_item3_pre+"";
         $('#item3_image_table').prepend('<img src="'+item3_image+'" width="20" height="20" ">');
+        drawEmotionChart();
     },
 
     slide: function (event, ui) {// 変更中
@@ -1563,6 +1580,7 @@ $("#slider_item4_number").slider({
         console.log("slider_item4_pre",slider_item4_pre);
         item4_image_table.innerHTML = slider_item4_pre+"";
         $('#item4_image_table').prepend('<img src="'+item4_image+'" width="20" height="20" ">');
+        drawEmotionChart();
     },
 
     slide: function (event, ui) {// 変更中
@@ -3600,6 +3618,8 @@ btn.addEventListener('click', function() {
     updateBtn();
     slider();
 
+    drawEmotionChart();
+
     indexLibrary.set_agentpoint(total);
 
     indexLibrary.set_limit(limit);
@@ -3629,6 +3649,9 @@ btn2.addEventListener('click', function() {
     svo_faceDraw();
     updateBtn();
     slider();
+
+    drawEmotionChart();
+
 
     indexLibrary.set_agentpoint(total);
 
@@ -3660,6 +3683,8 @@ btn3.addEventListener('click', function() {
     updateBtn();
     slider();
 
+    drawEmotionChart();
+
     indexLibrary.set_agentpoint(total);
 
     indexLibrary.set_limit(limit);
@@ -3689,6 +3714,9 @@ btn4.addEventListener('click', function() {
     svo_faceDraw();
     updateBtn();
     slider();
+
+    drawEmotionChart();
+
 
     indexLibrary.set_agentpoint(total);
 
@@ -3750,10 +3778,228 @@ function inputCheck () {
 
 
 
+//ここから尤度関数グラフ
+/**
+ * 度をラジアンに変換する
+ */
+function deg2rad(d) {
+  return (Math.PI / 180) * d;
+}
 
+/**
+ * 配列の内積を計算する (dot product)
+ * @param {number[]} a
+ * @param {number[]} b
+ * @returns {number}
+ */
+function dot(a, b) {
+  let s = 0;
+  for (let i = 0; i < a.length; i++) {
+    s += a[i] * b[i];
+  }
+  return s;
+}
 
+/**
+ * 配列同士の足し算・引き算
+ * @param {number[]} a
+ * @param {number[]} b
+ * @returns {number[]}
+ */
+function sub(a, b) {
+  return a.map((ai, i) => ai - b[i]);
+}
 
+//効用の計算
+function Utility(theta, x_other, q, w_self, w_other){
+    //var x_other = [pre_1value, pre_2value, pre_3value, pre_4value];
+    var x_self = sub(q, x_other);
+    var u_total = dot(x_other, w_other) * Math.cos(deg2rad(theta)) + dot(x_self, w_self) * Math.sin(deg2rad(theta));;
+    return u_total;
+}
 
+//すべての配分を探索する
+function enumerate_x(){
+    var x_list = [];
+    for(let item1=0; item1<=item1_number; item1++){
+        for(let item2=0; item2<=item2_number; item2++){
+            for(let item3=0; item3<=item3_number; item3++){
+                for(let item4=0; item4<=item4_number; item4++){
+                    x_list.push([item1,item2,item3,item4]);
+                }
+            }
+        }
+    }
+    return x_list;
+}
+
+ 
+function Utility_to_emotion(){
+    const w_self = [my_item1_point,my_item2_point,my_item3_point,my_item4_point];
+    const w_other = [op_item1_point,op_item2_point,op_item3_point,op_item4_point];
+    const q = [item1_number, item2_number, item3_number, item4_number]
+    let temp_u = []; //最大効用を計算するための一時的な配列
+    let emotion = {}; //感情を格納するオブジェクト
+    let max_u = 0; //最大効用
+    const x_list = enumerate_x();
+    let limit = 0;
+    const x_other = [pre_1value, pre_2value, pre_3value, pre_4value];
+    let real_u = 0; //実際の効用
+    const linedata = []; //グラフ描画用データ、シータごとの感情の尤度を格納
+    for(theta_deg=-90; theta_deg<=90; theta_deg+=5){
+        for(i=0; i<x_list.length; i++){
+            temp_u[i] = Utility(theta_deg, x_list[i], q, w_self, w_other);
+        }
+        max_u = Math.max(...temp_u);
+        limit = max_u - 7; 
+        const epsilon = 0.001;
+        real_u = Utility(theta_deg, x_other, q, w_self, w_other);
+        if (real_u < limit - epsilon) {
+            emotion = { anger: 1, neutral: 0, joy1: 0, joy2: 0, joy3: 0, joy4: 0, joy5: 0, joy6: 0, joy7: 0 };
+        }
+        else if (Math.abs(real_u - limit) <= epsilon) {
+            emotion = { anger: 0, neutral: 1, joy1: 0, joy2: 0, joy3: 0, joy4: 0, joy5: 0, joy6: 0, joy7: 0 };
+        }
+        else if (real_u < (limit + 1)) {
+            emotion = { anger: 0, neutral: 0, joy1: 1, joy2: 0, joy3: 0, joy4: 0, joy5: 0, joy6: 0, joy7: 0 };
+        }
+        else if (real_u < (limit + 2)) {
+            emotion = { anger: 0, neutral: 0, joy1: 0, joy2: 1, joy3: 0, joy4: 0, joy5: 0, joy6: 0, joy7: 0 };
+        }
+        else if (real_u < (limit + 3)) {
+            emotion = { anger: 0, neutral: 0, joy1: 0, joy2: 0, joy3: 1, joy4: 0, joy5: 0, joy6: 0, joy7: 0 };
+        }
+        else if (real_u < (limit + 4)) {
+            emotion = { anger: 0, neutral: 0, joy1: 0, joy2: 0, joy3: 0, joy4: 1, joy5: 0, joy6: 0, joy7: 0 };
+        }
+        else if (real_u < (limit + 5)) {
+            emotion = { anger: 0, neutral: 0, joy1: 0, joy2: 0, joy3: 0, joy4: 0, joy5: 1, joy6: 0, joy7: 0 };
+        }
+        else if (real_u < (limit + 6)) {
+            emotion = { anger: 0, neutral: 0, joy1: 0, joy2: 0, joy3: 0, joy4: 0, joy5: 0, joy6: 1, joy7: 0 };
+        }
+        else {
+            emotion = { anger: 0, neutral: 0, joy1: 0, joy2: 0, joy3: 0, joy4: 0, joy5: 0, joy6: 0, joy7: 1 };
+        }
+        linedata.push({theta: theta_deg, emotion: emotion});
+    }
+    
+    return linedata;
+}
+
+// Chart.jsのグラフインスタンスを保持する変数
+let emotionChartInstance = null;
+
+// グラフを描画または更新する関数
+function drawEmotionChart(){
+    const linedata = Utility_to_emotion();
+    const labels = linedata.map(data => data.theta);
+    const angerData = linedata.map(data => data.emotion.anger);
+    const neutralData = linedata.map(data => data.emotion.neutral);
+    const joy1Data = linedata.map(data => data.emotion.joy1);
+    const joy2Data = linedata.map(data => data.emotion.joy2);
+    const joy3Data = linedata.map(data => data.emotion.joy3);
+    const joy4Data = linedata.map(data => data.emotion.joy4);
+    const joy5Data = linedata.map(data => data.emotion.joy5);
+    const joy6Data = linedata.map(data => data.emotion.joy6);
+    const joy7Data = linedata.map(data => data.emotion.joy7);
+
+    const ctx = document.getElementById('emotionChartCanvas').getContext('2d');
+
+    // 既存のグラフがあれば破棄
+    if (emotionChartInstance) {
+        emotionChartInstance.destroy();
+    }
+
+    emotionChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Anger',
+                    data: angerData,
+                    borderColor: "#f28e8e",
+                    fill: false
+                },
+                {
+                    label: 'Neutral',
+                    data: neutralData,
+                    borderColor: "#bfecc5",
+                    fill: false
+                },
+                {
+                    label: 'Joy1',
+                    data: joy1Data, 
+                    borderColor: "#f9e79f",
+                    fill: false
+                },
+                {
+                    label: 'Joy2',
+                    data: joy2Data,
+                    borderColor: "#f7dc6f",
+                    fill: false
+                },
+                {
+                    label: 'Joy3',
+                    data: joy3Data,
+                    borderColor: "#f4d03f",
+                    fill: false
+                },
+                {
+                    label: 'Joy4',
+                    data: joy4Data,
+                    borderColor: "#f1c40f",
+                    fill: false
+                },
+                {
+                    label: 'Joy5',
+                    data: joy5Data,
+                    borderColor: "#d4ac0d",
+                    fill: false
+                },
+                {
+                    label: 'Joy6',
+                    data: joy6Data,
+                    borderColor: "#b7950b",
+                    fill: false
+                },
+                {
+                    label: 'Joy7',
+                    data: joy7Data,
+                    borderColor: "#9a7d0a",
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Emotion Likelihood by Theta'
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'θ (deg)' // ★X軸のラベル
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Likelihood' // ★Y軸のラベル
+                    },
+                    
+                }
+            }
+        }
+    });
+            
+}
 
 
 

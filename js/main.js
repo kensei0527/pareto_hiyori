@@ -644,9 +644,9 @@ for(var i=1; i<5; i++){
 //スライダーの横にあるポイント表示
 //初期point数計算
 for(var i=1; i<5; i++){
-    $("#item"+i+"_value").text(eval("pre_"+i+"value")+"×"+eval("op_item"+i+"_point")+"point");
+    $("#item"+i+"_value").text(eval("pre_"+i+"value"));
 
-    $("#my_item"+i+"_value").text(eval("item"+i+"_number-pre_"+i+"value")+"×"+eval("my_item"+i+"_point")+"point");
+    $("#my_item"+i+"_value").text(eval("item"+i+"_number-pre_"+i+"value"));
 }
 // my_item1_point_table
 for(var i=1; i<5; i++){
@@ -859,10 +859,10 @@ function slider(){
             
             total = get_total();
             mytotal = get_total_point();
-            item1_count.innerHTML = ui.value+"×"+op_item1_point+"point";
+            item1_count.innerHTML = ui.value;
             // item1_count.innerHTML = ui.value+"×？point";
             current_op1 = ui.value
-            my_item1.innerHTML = item1_number-ui.value+"×"+my_item1_point+"point";
+            my_item1.innerHTML = item1_number-ui.value;
             current_my1 = item1_number-ui.value
             // my_item1_point.innerHTML = (item1-ui.value)*my_item1_point;
             my_total_point.innerHTML = mytotal;
@@ -899,10 +899,10 @@ function slider(){
             mytotal = get_total_point();
  
  
-            item1_count.innerHTML = ui.value+"×"+op_item1_point+"point";
+            item1_count.innerHTML = ui.value;
             // item1_count.innerHTML = ui.value+"×？point";
             current_op1 = ui.value
-            my_item1.innerHTML = item1_number-ui.value+"×"+my_item1_point+"point";
+            my_item1.innerHTML = item1_number-ui.value;
             current_my1 = item1_number-ui.value
             // my_item1_point.innerHTML = (item1-ui.value)*my_item1_point;
             my_total_point.innerHTML = mytotal;
@@ -938,10 +938,10 @@ function slider(){
  
              total = get_total();
              mytotal = get_total_point();
-             item2_count.innerHTML = ui.value+"×"+op_item2_point+"point";
+             item2_count.innerHTML = ui.value;
              // item2_count.innerHTML = ui.value+"×？point";
              current_op2 = ui.value
-             my_item2.innerHTML = item2_number-ui.value+"×"+my_item2_point+"point";
+             my_item2.innerHTML = item2_number-ui.value;
              current_my2 = item2_number-ui.value
              // my_item2_point.innerHTML = (item2-ui.value)*my_item2_point;
              my_total_point.innerHTML = mytotal;
@@ -972,10 +972,10 @@ function slider(){
  
              total = get_total();
              mytotal = get_total_point();
-             item2_count.innerHTML = ui.value+"×"+op_item2_point+"point";
+             item2_count.innerHTML = ui.value;
              // item2_count.innerHTML = ui.value+"×？point";
              current_op2 = ui.value
-             my_item2.innerHTML = item2_number-ui.value+"×"+my_item2_point+"point";
+             my_item2.innerHTML = item2_number-ui.value;
              current_my2 = item2_number-ui.value
              // my_item2_point.innerHTML = (item2-ui.value)*my_item2_point;
              my_total_point.innerHTML = mytotal;
@@ -1010,10 +1010,10 @@ function slider(){
  
              total = get_total();
              mytotal = get_total_point();
-             item3_count.innerHTML = ui.value+"×"+op_item3_point+"point";
+             item3_count.innerHTML = ui.value;
              // item3_count.innerHTML = ui.value+"×？point";
              current_op3 = ui.value
-             my_item3.innerHTML = item3_number-ui.value+"×"+my_item3_point+"point";
+             my_item3.innerHTML = item3_number-ui.value;
              current_my3 = item3_number-ui.value
              // my_item3_point.innerHTML = (item3-ui.value)*my_item3_point;
              my_total_point.innerHTML = mytotal;
@@ -1044,10 +1044,10 @@ function slider(){
  
              total = get_total();
              mytotal = get_total_point();
-             item3_count.innerHTML = ui.value+"×"+op_item3_point+"point";
+             item3_count.innerHTML = ui.value;
              // item3_count.innerHTML = ui.value+"×？point";
              current_op3 = ui.value
-             my_item3.innerHTML = item3_number-ui.value+"×"+my_item3_point+"point";
+             my_item3.innerHTML = item3_number-ui.value;
              current_my3 = item3_number-ui.value
              // my_item3_point.innerHTML = (item3-ui.value)*my_item3_point;
              my_total_point.innerHTML = mytotal;
@@ -1082,10 +1082,10 @@ function slider(){
          
              total = get_total();
              mytotal = get_total_point();
-             item4_count.innerHTML = ui.value+"×"+op_item4_point+"point";
+             item4_count.innerHTML = ui.value;
              // item4_count.innerHTML = ui.value+"×？point";
              current_op4 = ui.value
-             my_item4.innerHTML = item4_number-ui.value+"×"+my_item4_point+"point";
+             my_item4.innerHTML = item4_number-ui.value;
              current_my4 = item4_number-ui.value
              //  my_item4_point.innerHTML = (item4-ui.value)*my_item4_point;
              my_total_point.innerHTML = mytotal;
@@ -1114,10 +1114,10 @@ function slider(){
              for(var i=1; i<item4_number+1; i++){$('#opitem4_'+i).hide();}
              total = get_total();
              mytotal = get_total_point();
-             item4_count.innerHTML = ui.value+"×"+op_item4_point+"point";
+             item4_count.innerHTML = ui.value;
              // item4_count.innerHTML = ui.value+"×？point";
              current_op4 = ui.value
-             my_item4.innerHTML = item4_number-ui.value+"×"+my_item4_point+"point";
+             my_item4.innerHTML = item4_number-ui.value;
              current_my4 = item4_number-ui.value
              //  my_item4_point.innerHTML = (item4-ui.value)*my_item4_point;
              my_total_point.innerHTML = mytotal;
@@ -1226,7 +1226,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item1_point_table.innerHTML = my_item1_point_slider+"point";
             // my_item1_point = my_item1_point_slider;
-            my_item1_value.innerHTML = item1_number-pre_1value+"×"+my_item1_point_slider+"point";
+            my_item1_value.innerHTML = item1_number-pre_1value;
             drawEmotionChart();
         },
 
@@ -1236,7 +1236,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item1_point_table.innerHTML = my_item1_point_slider+"point";
             // my_item1_point = my_item1_point_slider;
-            my_item1_value.innerHTML = item1_number-pre_1value+"×"+my_item1_point_slider+"point";
+            my_item1_value.innerHTML = item1_number-pre_1value;
         }
         
     });
@@ -1255,7 +1255,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item2_point_table.innerHTML = my_item2_point_slider+"point";
             // my_item2_point = my_item2_point_slider;
-            my_item2_value.innerHTML = item2_number-pre_2value+"×"+my_item2_point_slider+"point";
+            my_item2_value.innerHTML = item2_number-pre_2value;
             drawEmotionChart();
         },
 
@@ -1265,7 +1265,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item2_point_table.innerHTML = my_item2_point_slider+"point";
             // my_item2_point = my_item2_point_slider;
-            my_item2_value.innerHTML = item2_number-pre_2value+"×"+my_item2_point_slider+"point";
+            my_item2_value.innerHTML = item2_number-pre_2value;
         }
         
     });
@@ -1284,7 +1284,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item3_point_table.innerHTML = my_item3_point_slider+"point";
             // my_item3_point = my_item3_point_slider;
-            my_item3_value.innerHTML = item3_number-pre_3value+"×"+my_item3_point_slider+"point";
+            my_item3_value.innerHTML = item3_number-pre_3value;
             drawEmotionChart();
         },
 
@@ -1294,7 +1294,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item3_point_table.innerHTML = my_item3_point_slider+"point";
             // my_item3_point = my_item3_point_slider;
-            my_item3_value.innerHTML = item3_number-pre_3value+"×"+my_item3_point_slider+"point";
+            my_item3_value.innerHTML = item3_number-pre_3value;
         }
         
     });
@@ -1313,7 +1313,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item4_point_table.innerHTML = my_item4_point_slider+"point";
             // my_item4_point = my_item4_point_slider;
-            my_item4_value.innerHTML = item4_number-pre_4value+"×"+my_item4_point_slider+"point";
+            my_item4_value.innerHTML = item4_number-pre_4value;
             drawEmotionChart();
         },
 
@@ -1323,7 +1323,7 @@ function slider_my_point(){
             console.log("ui.value",ui.value);
             my_item4_point_table.innerHTML = my_item4_point_slider+"point";
             // my_item4_point = my_item4_point_slider;
-            my_item4_value.innerHTML = item4_number-pre_4value+"×"+my_item4_point_slider+"point";
+            my_item4_value.innerHTML = item4_number-pre_4value;
         }
         
     });
@@ -1347,7 +1347,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item1_point_table.innerHTML = op_item1_point_slider+"point";
             // op_item1_point = op_item1_point_slider;
-            item1_value.innerHTML = item1_number-pre_1value+"×"+op_item1_point_slider+"point";
+            item1_value.innerHTML = pre_1value;
 
             // already_slided = 0;
             // op_item1_point = op_item1_point_slider;
@@ -1362,7 +1362,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item1_point_table.innerHTML = op_item1_point_slider+"point";
             // op_item1_point = op_item1_point_slider;
-            item1_value.innerHTML = item1_number-pre_1value+"×"+op_item1_point_slider+"point";
+            item1_value.innerHTML = pre_1value;
 
             // already_slided = 0;
             // op_item1_point = op_item1_point_slider;
@@ -1386,7 +1386,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item2_point_table.innerHTML = op_item2_point_slider+"point";
             // op_item2_point = op_item2_point_slider;
-            item2_value.innerHTML = item2_number-pre_2value+"×"+op_item2_point_slider+"point";
+            item2_value.innerHTML = pre_2value;
 
             // already_slided = 0;
             // op_item2_point = op_item2_point_slider;
@@ -1401,7 +1401,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item2_point_table.innerHTML = op_item2_point_slider+"point";
             // op_item2_point = op_item2_point_slider;
-            item2_value.innerHTML = item2_number-pre_2value+"×"+op_item2_point_slider+"point";
+            item2_value.innerHTML = pre_2value;
 
             // already_slided = 0;
             // op_item2_point = op_item2_point_slider;
@@ -1425,7 +1425,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item3_point_table.innerHTML = op_item3_point_slider+"point";
             // op_item3_point = op_item3_point_slider;
-            item3_value.innerHTML = item3_number-pre_3value+"×"+op_item3_point_slider+"point";
+            item3_value.innerHTML = pre_3value;
 
             // already_slided = 0;
             // op_item3_point = op_item3_point_slider;
@@ -1440,7 +1440,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item3_point_table.innerHTML = op_item3_point_slider+"point";
             // op_item3_point = op_item3_point_slider;
-            item3_value.innerHTML = item3_number-pre_3value+"×"+op_item3_point_slider+"point";
+            item3_value.innerHTML = pre_3value;
 
             // already_slided = 0;
             // op_item3_point = op_item3_point_slider;
@@ -1464,7 +1464,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item4_point_table.innerHTML = op_item4_point_slider+"point";
             // op_item4_point = op_item4_point_slider;
-            item4_value.innerHTML = item4_number-pre_4value+"×"+op_item4_point_slider+"point";
+            item4_value.innerHTML = pre_4value;
 
             // already_slided = 0;
             // op_item4_point = op_item4_point_slider;
@@ -1479,7 +1479,7 @@ function slider_op_point(){
             console.log("ui.value",ui.value);
             op_item4_point_table.innerHTML = op_item4_point_slider+"point";
             // op_item4_point = op_item4_point_slider;
-            item4_value.innerHTML = item4_number-pre_4value+"×"+op_item4_point_slider+"point";
+            item4_value.innerHTML = pre_4value;
 
             // already_slided = 0;
             // op_item4_point = op_item4_point_slider;
@@ -2613,7 +2613,7 @@ function draw() {
         for (let i = 0; i*scaling_val+40 < width; i += 1) {
             if(i==0){
                 context.font = "15px serif";
-                context.fillText("A", 10, 20);
+                context.fillText("Other", 10, 20);
                 context.font = "10px serif";
 
             }
@@ -2653,7 +2653,7 @@ function draw() {
             if(i==0){
                 context.fillStyle = "rgba(0,0,0,1)" ;
                 context.font = "15px serif";
-                context.fillText("B", width-10, height);
+                context.fillText("Self", width-60, height);
                 context.font = "10px serif";
 
             }
